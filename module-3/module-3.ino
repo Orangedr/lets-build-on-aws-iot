@@ -11,23 +11,21 @@
 #include <ArduinoJson.h>
 
 
-#define hostName "letsbuild01"
+// #define hostName "letsbuild01"
 
 const char* ssid = "surfing-iot";
 const char* password = "iotiotiot";
 
 // The MQTT topics that this device should publish/subscribe
-#define AWS_IOT_PUBLISH_SENSORS   "foodcontrol/sensors"
-#define AWS_IOT_PUBLISH_BUTTON   "callwaiter/button"
-#define AWS_IOT_SUBSCRIBE_TOPIC "control/lamp"
+#define AWS_IOT_PUBLISH_SENSORS   "ESP32/sensors"
+#define AWS_IOT_PUBLISH_BUTTON   "ESP32/button"
+#define AWS_IOT_SUBSCRIBE_TOPIC "ESP32/SUB"
 
 WiFiClientSecure net = WiFiClientSecure();
 MQTTClient client = MQTTClient(256);
 
 #define SECRET
-#define THINGNAME "letsbuild01"
 
-ClosedCube_HDC1080 hdc1080;
 
 #define TABLE_NUMBER 10
 
